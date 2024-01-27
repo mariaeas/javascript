@@ -9,14 +9,8 @@
 //     alert(`A soma de ${number1} com ${number2} é igual a ${number1 + number2}` 
 // }
 
-//% é o restante do que sobra de uma divisão
 function delta() {
     let number1 = +prompt("Digite o primeiro número")
-    // > maior
-    // < menor
-    // == igual
-    // === idêntico
-    // ! não
     if (number1 % 2 == 0) {
         alert("O número digitado é par!")
     } else {
@@ -46,13 +40,6 @@ function beta() {
         alert("Nenhum dos números digitados são maiores que 10")
     }
 }
-
-// + soma
-// - subtração
-// * multiplicação
-// / divisão
-// ** exponenciação
-// % resto por
 
 function nota() {
     let number1 = +prompt("Digite a nota do 1° bimestre")
