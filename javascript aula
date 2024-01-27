@@ -1,6 +1,6 @@
 //let userName = prompt("Digite o seu nome")
 //function welcome() {
-//alert(`Bem vindo(a, ${userName})`)}
+//alert(`Bem vindo(a), ${userName}`)}
 
 // function welcome(){
 //     let number1 = +prompt("Digite o primeiro número")
