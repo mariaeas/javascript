@@ -1,22 +1,23 @@
-function welcome() {
-    let userName = prompt("Digite o seu nome")
-    alert('Bem vindo (a), ${userName}')
-};
-
-console.log('Bem vindo ao curso, Maria Eduarda');
+console.log('Bem vinda ao curso, Maria Eduarda');
 let idade = 24;
 console.log(idade);
 let altura = 160;
 console.log(altura);
 
+function welcome() {
+    let userName = prompt ("Digite seu nome")
+    alert(`Seja bem vindo(a), ${userName}`)
+    console.log(`A aluna ${userName}, está aprendendo JavaScript`)
+};
+
 //const não consegue redefinir o valor da variável
 //let permite que o valor da variável seja redefinido quantas vezes seja necessário
 //variáveis compostas, são separadas por letra maiúscula, após a primeira palavra começar com letra minúscula (nomeCompleto)
 
-let nome = 'Maria Eduarda'; //string literal, qualquer tipo de texto
-let idade2 = 24; //number literal
-let estaAprovado = true; //boolean- ajuda a construir regras no aplicativo
-let corSelecionado = null; //redefinir o valor
+let nome = 'Maria Eduarda';
+let idade2 = 24;
+let estaAprovado = true;
+let corSelecionado = null;
 
 let pessoa = {
     nome: 'Maria Eduarda',
@@ -59,8 +60,7 @@ console.log(resultado);
 //Operadores Aritiméticos (matemáticos)
 let salário = 100;
 console.log(salário - 5);
-
-//++ incrementação ; -- decrementação
+ 
 let idade3 = 24;
 console.log(--idade3);
 console.log(++idade3);
@@ -142,6 +142,10 @@ switch (permissao) {
 
 //LOOP:
 //1-FOR
+for (let contador = 1; contador <= 10; contador++) {
+    const element = array[index];
+    
+}
 for (let i = 0; i < 5; i++) {
     console.log('Estou aprendendo!', i)
     if (i % 2 !== 0) {
@@ -163,8 +167,9 @@ let O = 0;
 do {
     console.log('digitando');
     i++;
-};
+}
 while (O < 10);
+
 
 //4-FOR..IN
 const indivíduo = {
@@ -222,18 +227,17 @@ function verificarVelocidade() {
     const kmPorPonto = 5;
     let number1 = +prompt ('Digite o valor da velocidade atingida')
     if (velocidade <= velocidadeMáxima) {
-        alert 'OK';
+        alert ('OK');
     }
 
-    else if {
-        const pontos = Math.Floor(((velocidade - velocidadeMáxima) / kmPorPonto));
-        if(pontos >= 12)
-        alert ('Carteira suspensa');
+    // else if 
+    //     const pontos = Math.Floor(((velocidade - velocidadeMáxima) / kmPorPonto));
+    //     if(pontos >= 12)
+    //     alert ('Carteira suspensa');
     
-        else ()
-    alert ('Pontos', pontos);
-    }
-}
+    //     else
+    // alert ('Pontos', pontos);
+    // };
 
 exibirTipo(5);
 function exibirTipo(limite) {
@@ -244,18 +248,4 @@ function exibirTipo(limite) {
     console.log('ÍMPAR');
     }
 }
-
-const filme = {
-    título : 'Vingadores',
-    ano : 2018,
-    diretor : 'Robin',
-    personagem : 'Thor'
 }
-exibirPropriedades(filme);
-function exibirPropriedades(obj) {
-    for(prop in obj)
-    if(typeof obj[prop] === 'string')
-    console.log(prop,obj[prop])
-}
-
-
