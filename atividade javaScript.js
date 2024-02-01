@@ -7,7 +7,7 @@ function criarTabuada() {
 
 function obterFatorial() {
     let num = +prompt("Digite o número aqui")
-    let soma = 1;
+    let fatorial = 1;
     if (Number.isInteger(num) == true) {
         while (num > 0) {
             soma = soma * num;
@@ -22,21 +22,28 @@ function obterFatorial() {
     }
 }
 
+// function obterFatorial() {
+//     let N = +prompt("Digite aqui o número para resolução do fatorial")
+//     let fatorial = N;
+//     for(cont = 1; cont < N; cont++ ) {
+//     fatorial = fatorial * (N - cont);
+// }
+// alert(N + "! = " + fatorial);
+// }
+
+
 
 function adivinhação() {
-    let sequência = ("1 , 100")
+    let númeroSorteado = Math.floor(math.rando() * 100);
     let number2 = +prompt("Digite aqui, o número que você pensa ter sido o sorteado, para esta dinâmica")
-    while (`${sequência.length} !== number2`) {
-        console.log(`${sequência.length}`)
-
-        if (`number2 < ${sequência.length}`) {
+    while ( númeroSorteado !== number2) 
+        if (number2 < númeroSorteado) {
             alert("O número digitado é menor que o escolhido, resposta errada")
 
-        } else if (`number2 > ${sequência.length}`)
+        } else if (number2 > númeroSorteado)
             alert("O número digitado é maior que o escolhido, resposta errada")
 
         else {
             alert("O número que você digitou, está correto!")
         }
     }
-};
