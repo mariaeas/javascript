@@ -34,7 +34,7 @@ function obterFatorial() {
 
 
 function adivinhação() {
-    let númeroSorteado = Math.floor(math.rando() * 100);
+    let númeroSorteado = Math.floor(math.random() * 100);
     let number2 = +prompt("Digite aqui, o número que você pensa ter sido o sorteado, para esta dinâmica")
     while ( númeroSorteado !== number2) 
         if (number2 < númeroSorteado) {
