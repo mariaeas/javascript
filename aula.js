@@ -5,19 +5,10 @@ let altura = 160;
 console.log(altura);
 
 function welcome() {
-    let userName = prompt ("Digite seu nome")
+    let userName = prompt("Digite seu nome")
     alert(`Seja bem vindo(a), ${userName}`)
     console.log(`A aluna ${userName}, está aprendendo JavaScript`)
 };
-
-//const não consegue redefinir o valor da variável
-//let permite que o valor da variável seja redefinido quantas vezes seja necessário
-//variáveis compostas, são separadas por letra maiúscula, após a primeira palavra começar com letra minúscula (nomeCompleto)
-
-let nome = 'Maria Eduarda';
-let idade2 = 24;
-let estaAprovado = true;
-let corSelecionado = null;
 
 let pessoa = {
     nome: 'Maria Eduarda',
@@ -35,7 +26,6 @@ console.log(família[2]);
 let nomeDoColega = ['Bruno', 24, 'Guaporema'];
 console.log(nomeDoColega);
 
-//COMO NOMEAR UMA FUNÇÃO= Verbo+Substantivo
 let corSite = "azul"
 function resetaCor(cor) {
     corSite = cor;
@@ -60,7 +50,7 @@ console.log(resultado);
 //Operadores Aritiméticos (matemáticos)
 let salário = 100;
 console.log(salário - 5);
- 
+
 let idade3 = 24;
 console.log(--idade3);
 console.log(++idade3);
@@ -85,7 +75,6 @@ function casa() {
     }
 }
 
-//Operadores Lógicos: &&(e); ||(ou); !(not)
 //Falsy - undefined, null, 0, false, '', NaN(not a number)
 //Truthy
 
@@ -110,18 +99,38 @@ console.log(a);
 console.log(b);
 
 //IF..ELSE
-//Se a hora estiver entre 06:00 até 12:00: Bom Dia!
-let hora = 10 //posso definir a hora que quiser ;
+let horaAtual = new Date()
+let hora = agora.getHours()
 if (hora > 6 && hora < 12) {
     console.log("Bom dia!");
-}
-//Se estiver entre 12:00 até 18:00: Boa tarde!
-else if (hora > 12 && hora < 18) {
+} else if (hora > 12 && hora < 18) {
     console.log("Boa tarde!");
-}
-//Caso contrário: Boa noite!
-else {
+} else {
     console.log("Boa noite!");
+}
+
+function verificarVelocidade() {
+    const velocidadeMaxima = 70;
+    const kmPorPonto = 5;
+    let velocidade = +prompt('Digite a velocidade atingida')
+    if (velocidade <= velocidadeMaxima) {
+        alert('OK');
+
+    } else if (`${velocidade} - ${velocidadeMaxima}`) {
+        alert(`Você ultrapassou ${velocidade - velocidadeMaxima} km`);
+
+    } else if (pontos >= 10)
+    alert(`Carteira suspensa, você recebeu ${(velocidade - velocidadeMaxima) / 5} pontos`);
+};
+
+exibirTipo(5);
+function exibirTipo(limite) {
+    for (let i = 0; i <= limite; i++) {
+        if (i % 2 === 0)
+            console.log('PAR');
+        else
+            console.log('ÍMPAR');
+    }
 }
 
 //Switch..case
@@ -130,7 +139,7 @@ permissao = 'gerente';
 switch (permissao) {
     case 'comum':
         console.log('usuário comum');
-        break; //parar esta ação
+        break;
 
     case 'gerente':
         console.log('usuário gerente');
@@ -138,13 +147,14 @@ switch (permissao) {
 
     default:
         console.log('usuário não reconhecido')
-}
+        break
+};
 
 //LOOP:
 //1-FOR
 for (let contador = 1; contador <= 10; contador++) {
     const element = array[index];
-    
+
 }
 for (let i = 0; i < 5; i++) {
     console.log('Estou aprendendo!', i)
@@ -199,53 +209,24 @@ function maior() {
     } else {
         return number2;
     }
-}
+};
 
 //FIZZBUZZ
 function fizzBuzz() {
     let entrada = +prompt('Digite a entrada')
     if (typeof entrada !== 'number')
-    alert ('Não é um número');
+        alert('Não é um número');
 
     if (entrada % 3 === 0)
-    alert ('Fizz');
+        alert('Fizz');
 
     if (entrada % 5 === 0)
-    alert ('Buzz');
+        alert('Buzz');
 
     if (entrada % 3 && 5 === 0)
-    alert ('FizzBuzz')
+        alert('FizzBuzz')
 
     else {
-    alert ('entrada');
+        alert('entrada');
     }
-}
-
-verificarVelocidade(70);
-function verificarVelocidade() {
-    const velocidadeMáxima = 70;
-    const kmPorPonto = 5;
-    let number1 = +prompt ('Digite o valor da velocidade atingida')
-    if (velocidade <= velocidadeMáxima) {
-        alert ('OK');
-    }
-
-    // else if 
-    //     const pontos = Math.Floor(((velocidade - velocidadeMáxima) / kmPorPonto));
-    //     if(pontos >= 12)
-    //     alert ('Carteira suspensa');
-    
-    //     else
-    // alert ('Pontos', pontos);
-    // };
-
-exibirTipo(5);
-function exibirTipo(limite) {
-    for(let i = 0; i <= limite; i++) {
-        if (i % 2 === 0)
-        console.log('PAR');
-    else
-    console.log('ÍMPAR');
-    }
-}
-}
+};
