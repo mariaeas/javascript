@@ -6,44 +6,30 @@ function criarTabuada() {
 };
 
 function obterFatorial() {
-    let num = +prompt("Digite o número aqui")
-    let fatorial = 1;
-    if (Number.isInteger(num) == true) {
-        while (num > 0) {
-            soma = soma * num;
-            console.log(`${soma} = ${soma} x ${num} = ${soma = soma * num}`)
-            num--
-        }
-        return soma
-
-    } else {
-        alert("não é inteiro")
-        return 0
-    }
+let N = +prompt("Digite aqui o número para resolução do fatorial")
+let fatorial = N;
+for(cont = 1; cont < N; cont++ ) {
+fatorial = fatorial * (N - cont);
 }
-
-// function obterFatorial() {
-//     let N = +prompt("Digite aqui o número para resolução do fatorial")
-//     let fatorial = N;
-//     for(cont = 1; cont < N; cont++ ) {
-//     fatorial = fatorial * (N - cont);
-// }
-// alert(N + "! = " + fatorial);
-// }
-
-
+alert(N + "! = " + fatorial);
+};
 
 function adivinhação() {
-    let númeroSorteado = Math.floor(math.random() * 100);
+    let chute= 1;
+    let númeroSorteado = Math.floor(Math.random() * 100);
     let number2 = +prompt("Digite aqui, o número que você pensa ter sido o sorteado, para esta dinâmica")
-    while ( númeroSorteado !== number2) 
+    while ( chute !== 100) {
         if (number2 < númeroSorteado) {
             alert("O número digitado é menor que o escolhido, resposta errada")
-
-        } else if (number2 > númeroSorteado)
+           ++chute
+            
+        } else if (number2 > númeroSorteado) {
             alert("O número digitado é maior que o escolhido, resposta errada")
-
-        else {
+            ++chute
+            
+        } else {
             alert("O número que você digitou, está correto!")
+            break
         }
     }
+}
