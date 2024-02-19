@@ -18,7 +18,6 @@ let pessoa = {
 };
 console.log(pessoa);
 
-//Arrays - conjunto de dados que pode ser acessado por um índice específico
 let família = [11, 24, 52];
 console.log(família.length);
 console.log(família[2]);
@@ -34,6 +33,16 @@ console.log(corSite);
 resetaCor("vermelho");
 console.log(corSite);
 
+function somar() {
+    let texto1 = document.getElementById("textn1")
+    let texto2 = document.getElementById("textn2")
+    let resultado = document.getElementById("res")
+    let n1 = number(texto1.value)
+    let n2 = number(texto2.value)
+    let soma = n1 + n2
+    resultado.innerText = `A soma entre ${n1} e ${n2} é igual a ${soma}`
+}
+
 //FUNÇÕES: 1- Realiza uma tarefa e não devolve nada
 function dizerNome() {
     console.log('Maria Eduarda');
@@ -43,7 +52,7 @@ dizerNome();
 // FUNÇÕES: 2- Faz um  cálculo ou operação, e retorna algo
 function MultiplicarPorDois(valor) {
     return valor * 2;
-}
+};
 let resultado = MultiplicarPorDois(5);
 console.log(resultado);
 
@@ -55,32 +64,18 @@ let idade3 = 24;
 console.log(--idade3);
 console.log(++idade3);
 
-//Operadores de Atribuição
-let valorTecladoGamer = 100;
-valorTecladoGamer += valorTecladoGamer;
-console.log(valorTecladoGamer);
-
 //Operadores de Comparação/Igualdade
 //Igualdade estrita
 console.log(1 === 1);
 console.log('1' === 1)
 
-//Operadores Ternário
-function casa() {
-    let number1 = +prompt("Digite o valor da pontuação");
-    if (number1 > 100) {
-        alert("Cliente Premium")
-    } else {
-        alert("Cliente Comum")
-    }
-}
-
 //Falsy - undefined, null, 0, false, '', NaN(not a number)
 //Truthy
 
+//IF..ELSE
 function idade4() {
-    let string1 = +prompt(`Possui carteira de trabalho`);
-    let string2 = +prompt(`É maior de idade`);
+    let string1 = +prompt("Possui carteira de trabalho");
+    let string2 = +prompt("É maior de idade");
     if (string1 && string2 == true) {
         alert("Pode ser contratado")
 
@@ -90,15 +85,16 @@ function idade4() {
 
 };
 
-let a = 'vermelho';
-let b = 'azul';
-let c = a;
-a = b;
-b = c;
-console.log(a);
-console.log(b);
+function casa() {
+    let number1 = +prompt("Digite o valor da sua pintuação de cliente");
+    if (number1 > 100) {
+        alert("Cliente Premium")
+    } else {
+        alert("Cliente Comum")
+    }
+};
 
-//IF..ELSE
+//Para mostrar a hora atual, sempre do navegador que estará rodando o código
 let horaAtual = new Date()
 let hora = agora.getHours()
 if (hora > 6 && hora < 12) {
@@ -107,7 +103,7 @@ if (hora > 6 && hora < 12) {
     console.log("Boa tarde!");
 } else {
     console.log("Boa noite!");
-}
+};
 
 function verificarVelocidade() {
     const velocidadeMaxima = 70;
@@ -120,18 +116,8 @@ function verificarVelocidade() {
         alert(`Você ultrapassou ${velocidade - velocidadeMaxima} km`);
 
     } else if (pontos >= 10)
-    alert(`Carteira suspensa, você recebeu ${(velocidade - velocidadeMaxima) / 5} pontos`);
+        alert(`Carteira suspensa, você recebeu ${(velocidade - velocidadeMaxima) / 5} pontos`);
 };
-
-exibirTipo(5);
-function exibirTipo(limite) {
-    for (let i = 0; i <= limite; i++) {
-        if (i % 2 === 0)
-            console.log('PAR');
-        else
-            console.log('ÍMPAR');
-    }
-}
 
 //Switch..case
 let permissao;
@@ -152,16 +138,22 @@ switch (permissao) {
 
 //LOOP:
 //1-FOR
-for (let contador = 1; contador <= 10; contador++) {
-    const element = array[index];
+exibirTipo(5);
+function exibirTipo(limite) {
+    for (let i = 0; i <= limite; i++) {
+        if (i % 2 === 0)
+            console.log('PAR');
+        else
+            console.log('ÍMPAR');
+    }
+};
 
-}
-for (let i = 0; i < 5; i++) {
-    console.log('Estou aprendendo!', i)
+for (let i = 2; i < 5; i++) {
+    console.log('Estou aprendendo!', i++)
     if (i % 2 !== 0) {
         console.log(i);
     }
-}
+};
 
 //2-WHILE
 let i = 5;
@@ -169,17 +161,15 @@ while (i >= 1) {
     if (i % 2 !== 0) {
         console.log(i);
     }
-    i--;
-}
+    i++;
+};
 
 //3-DO..WHILE
 let O = 0;
 do {
     console.log('digitando');
     i++;
-}
-while (O < 10);
-
+} while (O <= 10);
 
 //4-FOR..IN
 const indivíduo = {
