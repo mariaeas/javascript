@@ -1,17 +1,17 @@
-// let data = {
-//     nome: "Maria Eduarda",
-//     idade: 24,
-//     isStudent: true
-// };
+//nome: country.translations.por.common
+//imagem: country.flags.png
+//alt: country.flags.alt
+//flag: country.flag
+//região: country.region
 
-// fetch("https://webhook.site/3212e763-da94-4547-b7c2-dd33f449f396", {
-//     method: "POST",
-//     body: JSON.stringify(data)
-// });
+/* fetch("https://webhook.site/3212e763-da94-4547-b7c2-dd33f449f396", {
+    method: "POST",
+    body: JSON.stringify(data)
+})*/
 
-//MESMA COISA QUE O DEBAIXO:
-//let list = () => {fetch("https://restcountries.com/v3.1/all")
-//.then(json =>{
+/*MESMA COISA QUE O DEBAIXO:
+let list = () => {fetch("https://restcountries.com/v3.1/all")
+.then(json =>{*/
 
 function search() {
     let input = document.getElementById("pesquisar").value
@@ -28,7 +28,7 @@ function search() {
 }
 search();
 
-function list () {
+function list() {
     fetch("https://restcountries.com/v3.1/all")
         .then(json => json.json())
         .then(countries => {
@@ -36,11 +36,6 @@ function list () {
             let countriesHtml = "";
             for (let index = 0; index < countries.length; index++) {
                 const country = countries[index];
-                //nome: country.translations.por.common
-                //imagem: country.flags.png
-                //alt: country.flags.alt
-                //flag: country.flag
-                //região: country.region
 
                 countriesHtml += `
                 <div class="col-4 mt-3">
@@ -59,7 +54,6 @@ function list () {
             }
             row.innerHTML = countriesHtml;
         })
-
 
 
 }

@@ -18,9 +18,10 @@ let pessoa = {
 };
 console.log(pessoa);
 
-let família = [11, 24, 52];
-console.log(família.length);
-console.log(família[2]);
+let familia = [11, 24, 52];
+familia[3] = 19
+console.log(familia.length);
+console.log(familia[2]);
 
 let nomeDoColega = ['Bruno', 24, 'Guaporema'];
 console.log(nomeDoColega);
